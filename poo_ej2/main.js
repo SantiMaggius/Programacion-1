@@ -6,4 +6,4 @@ function ejecutar ()
     bat.consumir_api()
 }
 
-document.getElementById("btn").addEventListener("click", ejecutar)
+ejecutar()

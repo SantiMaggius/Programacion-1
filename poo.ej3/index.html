@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poo_ejNº3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar " style="background-color: aquamarine;">
+        <div class="container-fluid">
+          <span class="h1">Producto</span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+
+              <form id="form_producto">         
+                <div class="mb-4">
+                    <label class="form-label">Descripcion</label>
+                    <input class="form-control" id="descripcion" type="text" placeholder="ingrese una breve descripcion">
+                
+                
+                    <label class="form-label" for="" >Precio de venta</label>
+                    <input class="form-control" id="precio" type="text" placeholder="ingrese el precio de venta">
+                </div>
+                <div class="mb-4">
+                    <select name="cateroria" id="categoria" class="form-select" aria-label="Default select example" >
+                    <option selected>Categoria </option>
+                    <option value="1">Heladera</option>
+                    <option value="2">TV</option>
+                    <option value="3">Microondas</option>
+                    <option value="4">Licuadora</option>
+                    <option value="5">Tostadora</option>
+                    </select>
+                </div>
+              </form>     
+
+
+                <div class="mb-4">
+                    <button id="btn_guardar" class="btn btn_success">Guardar</button>
+                    <button style="display: none;" id="btn_actualizar" class="btn btn_primary">Actualuzar</button>
+                </div>        
+                
+            </div>
+            <div class="col-lg-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Descripcion</th>
+                            <th>Precio de venta</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="mymodal" class="modal fade" tabindex="-1" data-bs-backdrop="statick" data-bs-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Eliminar</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Esta seguro de realizar esta accion.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="btn-eliminar" type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+    <script src="main.js" type="module"></script>
+    <script src="auxiliar.js"></script>
+</body>
+</html>
