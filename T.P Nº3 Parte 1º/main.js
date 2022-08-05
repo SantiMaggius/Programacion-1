@@ -6,8 +6,9 @@ function guardar()
     let descripcion=document.getElementById("descripcion").value
     let precio=document.getElementById("precio").value
     let categoria=document.getElementById("marcas").value
+    let imagen=document.getElementById("imagen").value
 
-    let producto=new Producto(descripcion,precio,categoria)
+    let producto=new Producto(descripcion,precio,categoria,imagen)
 
     producto.guardar_coche()
 }

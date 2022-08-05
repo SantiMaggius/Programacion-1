@@ -1,9 +1,10 @@
 export default class Producto
 {
-    constructor(a,b,c){
+    constructor(a,b,c,i){
         this.descripcion=a
         this.precio=b
         this.categoria=c
+        this.imagen = i
     }
 
 
@@ -12,7 +13,8 @@ export default class Producto
         let nuevo_coche={
             descripcion:this.descripcion,
            precio:this.precio,
-           categoria:this.categoria
+           categoria:this.categoria,
+           imagen:this.imagen
         }
         if("Productos" in localStorage){
              let lista_productos=JSON.parse( localStorage.getItem("Productos"))
@@ -50,6 +52,9 @@ export default class Producto
            let fila = `
            <tr>
                 <td>${index+1}</td>
+                <td>
+                    <img style="width:4rem" src="${element.imagen}"></img>
+                </td>
                 <td>${element.descripcion}</td>
                 <td>${element.precio}</td>
                 <td>${element.categoria}</td>
